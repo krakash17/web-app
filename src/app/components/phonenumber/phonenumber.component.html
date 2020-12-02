@@ -1,0 +1,27 @@
+<h3>Add Phone Numbers</h3>
+
+<div class="row">
+
+    <form [formGroup]="numberForm" (ngSubmit)="getNumber()">
+        <div formArrayName="numberN">
+            <div *ngFor="let number of numbers.controls; let pointIndex=index" [formGroupName]="pointIndex">
+            <label>
+              Phone Number: <input formControlName="number" />
+            </label>
+
+             <button type="button" (click)="deleteNumber(pointIndex)">Delete Number</button>
+       </div>
+       <button type="button" (click)="addNumber()">Add Number</button>
+          </div>
+
+        <button  type="submit"  >Submit</button>
+
+
+    </form>
+    
+</div>
+<h3 *ngIf="number">
+    {{ this.numberForm.value.numberN | json }}
+
+</h3>
+

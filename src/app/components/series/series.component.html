@@ -1,0 +1,20 @@
+<h3>Finding Number In Series</h3>
+
+<h5>2,3,10,15,26,35,50,63</h5>
+
+<div class="row">
+    <form [formGroup]="seriesForm" (ngSubmit)="getIndex()">
+
+        <input type="number" placeholder="Enter Index" formControlName="index"  inputmode="number">
+
+        <button  type="submit"  >Submit</button>
+
+
+    </form>
+</div>
+
+<div *ngIf="showResult" class="row">
+    <h2>Result = {{number}}</h2>
+</div>
+
+
