@@ -6,7 +6,7 @@
         <div formArrayName="numberN">
             <div *ngFor="let number of numbers.controls; let pointIndex=index" [formGroupName]="pointIndex">
             <label>
-              Phone Number: <input formControlName="number" />
+              Phone Number: <input type="number" formControlName="number" />
             </label>
 
              <button type="button" (click)="deleteNumber(pointIndex)">Delete Number</button>

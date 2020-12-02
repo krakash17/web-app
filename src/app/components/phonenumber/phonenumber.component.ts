@@ -20,7 +20,7 @@ export class PhonenumberComponent implements OnInit {
     return this.numberForm.get('numberN') as FormArray;
   }
   addNumber() {
-    this.numbers.push(this.fb.group({number:''}));
+    this.numbers.push(this.fb.group({numbergit:''}));
   }
 
   deleteNumber(index) {
